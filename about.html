@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iStore | Om os</title>
+    <title>iStore | Om oss</title>
     <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
@@ -12,34 +12,49 @@
         <div class="container header-grid">
             <a href="index.html" class="logo">iStore</a>
             <nav class="main-nav">
-                <a href="index.html">Forside</a>
+                <a href="index.html">Startsida</a>
                 <a href="products.html">Produkter</a>
-                <a href="about.html" class="active">Om os</a>
+                <a href="about.html" class="active">Om oss</a>
             </nav>
-        </div>
+            </div>
     </header>
 
-    <main class="container" style="padding: 100px 20px; max-width: 850px;">
-        <div style="text-align: center; margin-bottom: 80px;">
-            <h1 style="font-size: 3.8rem; letter-spacing: -0.03em; margin-bottom: 20px;">Vi elsker Apple.</h1>
-            <p style="font-size: 1.6rem; color: var(--apple-gray); line-height: 1.4;">iStore er Danmarks destination for de nyeste Macs, iPhones og iPads.</p>
+    <main class="container" style="padding: 80px 20px; max-width: 850px;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <span class="eyebrow" style="margin-bottom: 15px;">Vår story</span>
+            <h1 style="font-size: clamp(2.5rem, 8vw, 3.8rem); letter-spacing: -0.03em; margin-bottom: 20px; font-weight: 700;">Vi älskar Apple.</h1>
+            <p style="font-size: 1.4rem; color: var(--apple-gray); line-height: 1.4;">iStore är Sveriges destination för de senaste Macs, iPhones och iPads.</p>
         </div>
 
-        <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left;">
+        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left;">
             <div style="background: var(--apple-card); padding: 40px; border-radius: 24px;">
-                <h2 style="margin-bottom: 15px;">Vores Mission</h2>
-                <p>Hos iStore stræber vi efter at levere den bedste teknologi direkte til de danske forbrugere. Vi fokuserer på kvalitet, hurtig levering og personlig rådgivning.</p>
+                <h2 style="margin-bottom: 15px; font-size: 1.5rem;">Vårt uppdrag</h2>
+                <p style="color: var(--apple-gray); line-height: 1.6;">På iStore strävar vi efter att leverera den bästa tekniken direkt till svenska användare. Vi fokuserar på kvalitet, snabb leverans och personlig rådgivning.</p>
             </div>
             <div style="background: var(--apple-card); padding: 40px; border-radius: 24px;">
-                <h2 style="margin-bottom: 15px;">Hvorfor vælge os?</h2>
-                <p>Vi håndplukker de bedste enheder og sikrer, at alle produkter lever op til de højeste standarder. Din tilfredshed er vores vigtigste prioritet.</p>
+                <h2 style="margin-bottom: 15px; font-size: 1.5rem;">Varför välja oss?</h2>
+                <p style="color: var(--apple-gray); line-height: 1.6;">Vi handplockar de bästa enheterna och säkerställer att alla produkter uppfyller de högsta standarderna. Din tillfredsställelse är vår viktigaste prioritet.</p>
             </div>
         </section>
     </main>
 
-    <footer class="apple-footer">
-        <div class="container">
-            <p>&copy; 2026 iStore. Din Apple ekspert i Danmark.</p>
+    <footer class="apple-footer" style="padding: 60px 20px; text-align: center; background: #1d1d1f; color: white; margin-top: 80px;">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div style="font-size: 1.2rem; font-weight: 600;">iStore Support</div>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 10px 0;">
+                <div>📞 08 12410666</div>
+                <div>✉️ <a href="mailto:order@itreservdelar.se" style="color: #0071e3; text-decoration: none;">order@itreservdelar.se</a></div>
+            </div>
+
+            <div style="font-size: 0.9rem; opacity: 0.8; line-height: 1.8; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; width: 100%; max-width: 400px;">
+                <div style="font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Öppettider</div>
+                <div>Måndag - Torsdag: 09:00 - 16:00</div>
+                <div>Fredag: 09:00 - 15:00</div>
+                <div style="margin-top: 5px; color: #ff453a;">Lördag - Söndag: Stängt</div>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 iStore. Din Apple-expert i Sverige.</p>
         </div>
     </footer>
 

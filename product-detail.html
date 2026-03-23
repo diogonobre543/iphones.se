@@ -1,185 +1,114 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produktdetaljer | Billigt Filament</title>
+    <title>Produktdetaljer | iStore</title>
     <link rel="stylesheet" href="Assets/style.css">
-    <style>
-        /* Estilos específicos para a página de detalhes */
-        .detail-wrapper { padding: 60px 0; min-height: 80vh; }
-        
-        .detail-grid { 
-            display: grid; 
-            grid-template-columns: 1.1fr 0.9fr; 
-            gap: 60px; 
-            align-items: start; 
-        }
-
-        .detail-image { 
-            background: var(--ice); 
-            border-radius: 30px; 
-            padding: 60px; 
-            border: 1px solid var(--border); 
-            display: flex; 
-            justify-content: center;
-            position: sticky;
-            top: 120px;
-        }
-
-        .detail-image img { 
-            max-width: 100%; 
-            height: auto; 
-            mix-blend-mode: multiply; 
-            transition: transform 0.5s ease;
-        }
-
-        .detail-image:hover img { transform: scale(1.05); }
-
-        .detail-info h1 { 
-            font-size: 2.8rem; 
-            margin-bottom: 10px; 
-            letter-spacing: -1.5px; 
-            line-height: 1.1; 
-            color: var(--navy);
-        }
-
-        .detail-price { 
-            font-size: 2.2rem; 
-            font-weight: 800; 
-            color: var(--primary); 
-            margin-bottom: 30px; 
-        }
-
-        /* --- SEÇÃO DE DESCRIÇÃO --- */
-        .product-description-container {
-            margin: 40px 0;
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
-        }
-
-        .description-label {
-            display: block;
-            font-weight: 800;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            color: var(--slate);
-            margin-bottom: 15px;
-        }
-
-        .product-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #475569;
-        }
-
-        .back-btn { 
-            display: inline-flex; 
-            align-items: center;
-            margin-bottom: 40px; 
-            color: var(--slate); 
-            text-decoration: none; 
-            font-weight: 700; 
-            gap: 8px;
-            transition: 0.3s; 
-        }
-
-        .back-btn:hover { color: var(--primary); transform: translateX(-5px); }
-
-        .meta-box { 
-            background: var(--ice);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        .meta-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .meta-item:last-child { border: none; }
-
-        .buy-now-btn {
-            display: block;
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            border-radius: 14px;
-            font-weight: 800;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .buy-now-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-            filter: brightness(1.1);
-        }
-        
-        @media (max-width: 900px) {
-            .detail-grid { grid-template-columns: 1fr; gap: 40px; }
-            .detail-image { padding: 40px; position: static; }
-            .detail-info { text-align: left; }
-            .detail-info h1 { font-size: 2rem; }
-        }
-    </style>
 </head>
 <body>
-
     <header class="site-header">
         <div class="container header-grid">
-            <a href="index.html" class="logo">BILLIGT<span>FILAMENT</span></a>
+            <a href="index.html" class="logo">iStore</a>
             <nav class="main-nav">
-                <a href="index.html">Forside</a>
+                <a href="index.html">Startsida</a>
                 <a href="products.html">Produkter</a>
-                <a href="about.html">Om os</a>
+                <a href="about.html">Om oss</a>
             </nav>
-        </div>
+            </div>
     </header>
 
-    <main class="container detail-wrapper">
-        <a href="products.html" class="back-btn">
-            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
-            Tilbage til alle produkter
+    <main class="container" style="padding: 40px 20px; min-height: 80vh;">
+        <a href="products.html" style="text-decoration: none; color: var(--apple-blue); font-weight: 500; display: inline-block; margin-bottom: 30px;">
+            &larr; Tillbaka till alla produkter
         </a>
 
-        <div id="product-detail-render" class="detail-grid">
-            <div style="grid-column: 1/-1; text-align: center; padding: 100px;">
-                <div class="loader">Indlæser produktoplysninger...</div>
+        <div id="product-detail-render">
+            <div style="text-align: center; padding: 100px;">
+                <p>Laddar produktinformation...</p>
             </div>
         </div>
     </main>
 
-    <footer class="site-footer" style="padding: 60px 0; background: var(--navy); color: white; margin-top: 100px;">
-        <div class="container" style="text-align: center;">
-            <p>&copy; 2026 Billigt Filament ApS. Kvalitets filament til skarpe priser.</p>
+    <footer class="apple-footer" style="padding: 60px 20px; text-align: center; background: #1d1d1f; color: white;">
+        <div class="container">
+            <p style="margin-bottom: 20px; opacity: 0.8;">&copy; 2026 iStore Sverige. Alla rättigheter förbehålls.</p>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 0.9rem;">
+                <div style="color: #0071e3; font-weight: 600;">📞 08 12410666</div>
+                <div>✉️ <a href="mailto:order@itreservdelar.se" style="color: white; text-decoration: none; opacity: 0.7;">order@itreservdelar.se</a></div>
+            </div>
         </div>
     </footer>
 
     <script src="Assets/script.js"></script>
+    
     <script>
-        // Lógica de inicialização
-        async function startDetail() {
-            // Se a lista global de produtos não existir, carrega do JSON/API
-            if (typeof allProducts === 'undefined' || allProducts.length === 0) {
-                if (typeof initProducts === 'function') {
-                    await initProducts(); 
+        /**
+         * Renderiza os detalhes usando a lógica global do script.js
+         */
+        async function renderDetailedProduct() {
+            const container = document.getElementById('product-detail-render');
+            if (!container) return;
+
+            // 1. Garante que os produtos foram carregados da API
+            if (typeof alleProdukter === 'undefined' || alleProdukter.length === 0) {
+                if (typeof hentProdukter === 'function') {
+                    await hentProdukter();
                 }
             }
-            
-            // Renderiza o detalhe (certifique-se que no script.js o innerHTML use .product-text)
-            if (typeof initProductDetail === 'function') {
-                initProductDetail();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const productTitle = urlParams.get('name');
+
+            const p = alleProdukter.find(item => item.namn === productTitle);
+
+            if (!p) {
+                container.innerHTML = '<p style="text-align:center; padding:50px;">Produkten hittades inte.</p>';
+                return;
             }
+
+            // 2. Usa a função global extrairGrade para garantir que o estado está correto
+            const gradeFinal = typeof extrairGrade === 'function' ? extrairGrade(p.namn) : "Grade A+";
+            const nomeLimpo = p.namn.replace(/Grade\s*[A-C1-3+]+/i, "").replace(/\-\s*[ABC][+]?$/i, "").trim();
+
+            // 3. Renderiza com o layout de detalhes (modal-grid style)
+            container.innerHTML = `
+                <div class="modal-grid" style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+                    <div class="modal-img" style="flex: 1; min-width: 300px; text-align: center;">
+                        <img src="${p.billede}" alt="${p.namn}" style="max-width: 100%; height: auto; border-radius: 20px;">
+                    </div>
+                    <div class="modal-info" style="flex: 1; min-width: 300px;">
+                        <span class="eyebrow">${p.kategori}</span>
+                        <h1 style="font-size: 2.5rem; margin-bottom: 10px;">${nomeLimpo}</h1>
+                        <span class="modal-price" style="font-size: 1.8rem; font-weight: 600; display: block; margin-bottom: 20px;">
+                            ${p.pris.toLocaleString('sv-SE')} kr
+                        </span>
+                        
+                        <div class="meta-box">
+                            <div class="meta-item"><span>Skick:</span> <strong>${gradeFinal}</strong></div>
+                            <div class="meta-item"><span>Garanti:</span> <strong>24 Månader</strong></div>
+                            <div class="meta-item"><span>Lagerstatus:</span> <strong>I lager</strong></div>
+                        </div>
+
+                        <div style="margin: 30px 0;">
+                            <h3 style="margin-bottom: 10px; font-size: 1rem; text-transform: uppercase; color: var(--apple-gray);">Översikt</h3>
+                            <p style="line-height: 1.6; color: #424245;">
+                                Denna ${p.namn} har genomgått omfattande tester av våra tekniker. 
+                                Vi garanterar 100% funktionalitet och originaldelar för en premiumupplevelse.
+                            </p>
+                        </div>
+
+                        <a href="${p.link}" target="_blank" class="buy-now-btn" style="display: block; text-decoration: none;">Gå till beställning</a>
+                    </div>
+                </div>
+            `;
         }
-        
-        window.addEventListener('DOMContentLoaded', startDetail);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderDetailedProduct();
+            // Ativa o menu hambúrguer se a função existir no script.js
+            if (typeof initMenu === 'function') initMenu();
+        });
     </script>
 </body>
 </html>
