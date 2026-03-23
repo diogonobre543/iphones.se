@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iStore | Forside</title>
+    <link rel="stylesheet" href="Assets/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-grid">
+            <a href="index.html" class="logo">iStore</a>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Forside</a>
+                <a href="products.html">Produkter</a>
+                <a href="about.html">Om os</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="home-hero">
+            <div class="container hero-content">
+                <span class="eyebrow">Velkommen</span>
+                <h1>Det bedste fra Apple.</h1>
+                <p>Find din næste iPhone, iPad eller Mac hos Danmarks foretrukne forhandler.</p>
+                <div class="hero-links">
+                    <a href="products.html" class="btn-primary">Se alle produkter</a>
+                    <a href="about.html" class="btn-link">Læs om iStore ></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-title">Udvalgte modeller</h2>
+                
+                <div id="productGrid" class="apple-grid">
+                    </div>
+
+                <div class="view-more-container">
+                    <a href="products.html" class="btn-secondary">Se hele udvalget</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody" class="modal-grid">
+                </div>
+        </div>
+    </div>
+
+    <footer class="apple-footer">
+        <div class="container">
+            <p>&copy; 2026 iStore Danmark. Alle rettigheder forbeholdes.</p>
+            <p style="margin-top: 10px; opacity: 0.4; font-size: 0.75rem;">
+                Vi er en uafhængig forhandler af brugte og nye Apple-enheder med fokus på kvalitet.
+            </p>
+        </div>
+    </footer>
+
+    <script src="Assets/script.js"></script>
+</body>
+</html>
