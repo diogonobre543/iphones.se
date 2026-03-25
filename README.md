@@ -1,17 +1,18 @@
 import React from "react";
-import "../../Assets/style.css";
+import "../Assets/style.css";
 
-export default function AboutPage() {
+export default function HomePage() {
   return (
     <>
       {/* HEADER */}
       <header className="site-header">
         <div className="container header-grid">
           <a href="/" className="logo">iStore</a>
+          <button className="menu-toggle" aria-label="Menu">&#9776;</button>
           <nav className="main-nav">
-            <a href="/">Forside</a>
+            <a href="/" className="active">Forside</a>
             <a href="/products">Produkter</a>
-            <a href="/about" className="active">Om os</a>
+            <a href="/about">Om os</a>
           </nav>
         </div>
       </header>
@@ -20,49 +21,38 @@ export default function AboutPage() {
       <main>
         <section className="home-hero">
           <div className="container hero-content">
-            <span className="eyebrow">Vores historie</span>
-            <h1>Vi elsker Apple.</h1>
-            <p>iStore er Danmarks destination for de nyeste Macs, iPhones og iPads. Vi forener passion for teknologi med kompromisløs kvalitet.</p>
+            <span className="eyebrow">Velkommen</span>
+            <h1>Det bedste fra Apple.</h1>
+            <p>Find din næste iPhone, iPad eller Mac hos Danmarks foretrukne forhandler.</p>
+            <div className="hero-links">
+              <a href="/products" className="btn-primary">Se alle produkter</a>
+              <a href="/about" className="btn-link">Læs om iStore &gt;</a>
+            </div>
           </div>
         </section>
 
-        <section className="container" style={{ paddingBottom: "100px" }}>
-          <div className="apple-grid">
-            <div className="product-card" style={{ textAlign: "left", cursor: "default" }}>
-              <div className="category-tag">Vision</div>
-              <h2 style={{ fontSize: "1.8rem", marginBottom: "15px" }}>Vores Mission</h2>
-              <p style={{ color: "var(--apple-gray)", lineHeight: 1.6 }}>
-                Hos iStore stræber vi efter at levere den bedste teknologi direkte til de danske forbrugere. 
-                Vi fokuserer på kvalitet, hurtig levering og personlig rådgivning, så du altid får den rigtige løsning.
-              </p>
-            </div>
-
-            <div className="product-card" style={{ textAlign: "left", cursor: "default" }}>
-              <div className="category-tag">Kvalitet</div>
-              <h2 style={{ fontSize: "1.8rem", marginBottom: "15px" }}>Hvorfor vælge os?</h2>
-              <p style={{ color: "var(--apple-gray)", lineHeight: 1.6 }}>
-                Vi håndplukker de bedste enheder og sikrer, at alle produkter lever op til de højeste standarder. 
-                Med 24 måneders reklamationsret og dedikeret support er din tilfredshed vores vigtigste prioritet.
-              </p>
-            </div>
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: "60px" }}>
-            <p style={{ fontSize: "1.1rem", color: "var(--apple-black)", fontWeight: 500 }}>Har du spørgsmål?</p>
-            <div className="hero-links" style={{ marginTop: "20px" }}>
-              <a href="mailto:kontakt@istore.dk" className="btn-primary">Kontakt os nu</a>
+        <section className="featured-section">
+          <div className="container">
+            <h2 className="section-title">Udvalgte modeller</h2>
+            <div id="homeProductGrid" className="apple-grid"></div>
+            <div style={{ textAlign: "center", marginTop: "60px" }}>
+              <a href="/products" className="btn-secondary">Se hele udvalget</a>
             </div>
           </div>
         </section>
       </main>
 
+      {/* MODAL */}
+      <div id="productModal" className="modal">
+        <div className="modal-content">
+          <div id="modalBody"></div>
+        </div>
+      </div>
+
       {/* FOOTER */}
       <footer className="apple-footer">
-        <div className="container footer-content">
-          <p>&copy; 2026 iStore. Din Apple ekspert i Danmark.</p>
-          <div className="footer-info">
-            Alle produkter er gennemtestet og klar til brug. <br />Hurtig dag-til-dag levering i hele landet.
-          </div>
+        <div className="container">
+          <p>&copy; 2026 iStore Danmark. Alle rettigheder forbeholdes.</p>
         </div>
 
         {/* EXTRA DATAMARKED FOOTER */}
